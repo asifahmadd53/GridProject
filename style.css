@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bodoni Moda';
+}
+body{
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.2rem;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20vh;
+    background: linear-gradient(to right, #041308, #0b3317);
+    flex-wrap: wrap;
+}
+.heading{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-weight: 10000;
+}
+.sub-heading{
+    color: #ddd;
+    margin-top: 2.5vh;
+    text-align: center;
+    
+}
+.left-text{
+    flex-basis: 30%;
+    color: white;
+}
+.gallery{
+    flex-basis: 50%;
+    display: grid;
+    gap: 1vh;
+    grid-template-columns: 1fr  1fr 1fr ;
+    grid-auto-rows: 20vh;
+}
+.box{
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: #999;
+    transition: all 1s ease-in-out;
+    background-position:center;
+    box-shadow: 0 0 4px #fff;
+}
+#box1{
+    background-image: url(images/dave-lsoogGC_5dg-unsplash.jpg);
+    grid-row: span 2;
+}
+#box2{
+    background-image: url(images/jordan-mcqueen-PJCZOWuOxbU-unsplash.jpg);
+    grid-column:span 2;
+}
+
+#box3{
+    background-image: url(images/dawid-zawila--G3rw6Y02D0-unsplash.jpg);
+}
+#box4{
+    background-image: url(images/rachel-cook-mOcdke2ZQoE-unsplash.jpg);
+   
+    grid-row: span 2;
+}
+#box5{
+    background-image: url(images/oc-gonzalez-xg8z_KhSorQ-unsplash.jpg);
+    
+    grid-column: span 2;
+}
+#box6{
+    background-image: url(images/willian-justen-de-vasconcellos-T_Qe4QlMIvQ-unsplash.jpg);
+}
+#box7{
+    background-image: url(images/federico-respini-sYffw0LNr7s-unsplash.jpg);
+    grid-column: span 2;
+}
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .gallery {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    }
+
+    #box5 {
+        grid-column: span 3; 
+    }
+    #box4{
+        display: none;
+    }
+    .heading{
+        margin-top: 5px;
+    }
+}
